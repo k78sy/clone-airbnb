@@ -8,6 +8,8 @@ import List from '@/components/List.vue'
 <template>
   <header-top></header-top>
   <list></list>
+  <list></list>
+  <list></list>
   <footer-bottom></footer-bottom>
 </template>
 
