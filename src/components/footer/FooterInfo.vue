@@ -46,11 +46,11 @@
     </div>
     <div class="sns">
       <ul>
-        <li><i class="fa-light fa-globe"></i>한국어 (KR)</li>
+        <li><font-awesome-icon :icon="['fas', 'globe']" /> 한국어 (KR)</li>
         <li>₩ KRW</li>
-        <li><i class="fa-brands fa-facebook"></i></li>
-        <li><i class="fa-brands fa-x-twitter"></i></li>
-        <li><i class="fa-brands fa-instagram"></i></li>
+        <li><font-awesome-icon :icon="['fab', 'facebook']" /></li>
+        <li><font-awesome-icon :icon="['fab', 'x-twitter']" /></li>
+        <li><font-awesome-icon :icon="['fab', 'instagram']" /></li>
       </ul>
     </div>
   </address>

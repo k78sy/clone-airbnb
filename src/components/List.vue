@@ -1,12 +1,12 @@
-<script></script>
+<script setup></script>
 <template>
   <main>
     <section>
       <div class="slider-top">
         <a href="">서울의 인기숙소 ></a>
         <div class="slider-button">
-          <button class="arrow-btn btn-arctive"><i class="fa-solid fa-angle-left"></i></button>
-          <button class="arrow-btn"><i class="fa-solid fa-angle-right"></i></button>
+          <button class="arrow-btn btn-arctive"><font-awesome-icon :icon="['fas', 'angle-left']" /></button>
+          <button class="arrow-btn"><font-awesome-icon :icon="['fas', 'angle-right']" /></button>
         </div>
       </div>
       <div class="slider-list">
@@ -25,7 +25,7 @@
           </ul>
           <div class="item-icon">
             <span class="icon-cate">게스트 선호</span>
-            <span class="icon-heart"><i class="fa-regular fa-heart"></i></span>
+            <span class="icon-heart"><font-awesome-icon :icon="['far', 'heart']" /></span>
           </div>
         </div>
         <div class="slide-item">
@@ -43,7 +43,7 @@
           </ul>
           <div class="item-icon">
             <span class="icon-cate">게스트 선호</span>
-            <span class="icon-heart"><i class="fa-regular fa-heart"></i></span>
+            <span class="icon-heart"><font-awesome-icon :icon="['far', 'heart']" /></span>
           </div>
         </div>
         <div class="slide-item">
@@ -61,7 +61,7 @@
           </ul>
           <div class="item-icon">
             <span class="icon-cate">게스트 선호</span>
-            <span class="icon-heart"><i class="fa-regular fa-heart"></i></span>
+            <span class="icon-heart"><font-awesome-icon :icon="['far', 'heart']" /></span>
           </div>
         </div>
         <div class="slide-item">
@@ -79,7 +79,7 @@
           </ul>
           <div class="item-icon">
             <span class="icon-cate">게스트 선호</span>
-            <span class="icon-heart"><i class="fa-regular fa-heart"></i></span>
+            <span class="icon-heart"><font-awesome-icon :icon="['far', 'heart']" /></span>
           </div>
         </div>
         <div class="slide-item">
@@ -97,7 +97,7 @@
           </ul>
           <div class="item-icon">
             <span class="icon-cate">게스트 선호</span>
-            <span class="icon-heart"><i class="fa-regular fa-heart"></i></span>
+            <span class="icon-heart"><font-awesome-icon :icon="['far', 'heart']" /></span>
           </div>
         </div>
         <div class="slide-item">
@@ -115,7 +115,7 @@
           </ul>
           <div class="item-icon">
             <span class="icon-cate">게스트 선호</span>
-            <span class="icon-heart"><i class="fa-regular fa-heart"></i></span>
+            <span class="icon-heart"><font-awesome-icon :icon="['far', 'heart']" /></span>
           </div>
         </div>
         <div class="slide-item">
@@ -132,7 +132,7 @@
             </li>
           </ul>
           <div class="item-icon">
-            <span class="icon-heart"><i class="fa-regular fa-heart"></i></span>
+            <span class="icon-heart"><font-awesome-icon :icon="['far', 'heart']" /></span>
           </div>
         </div>
       </div>
@@ -186,7 +186,7 @@ section {
           color: #000;
         }
         &.item-date {
-          
+
         }
         span{
           &:not(:first-child){

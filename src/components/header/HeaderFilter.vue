@@ -22,7 +22,7 @@
           </div>
         </li>
       </ul>
-      <button class="filter-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="filter-search"><font-awesome-icon :icon="['fas', 'magnifying-glass']" /></button>
     </div>
   </nav>
 </template>

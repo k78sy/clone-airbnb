@@ -18,8 +18,8 @@
     </div>
     <div class="nav-right">
       <a href="">호스팅하기</a>
-      <button><i class="fa-solid fa-globe"></i></button>
-      <button><i class="fa-solid fa-bars"></i></button>
+      <button><font-awesome-icon :icon="['fas', 'globe']" /></button>
+      <button><font-awesome-icon :icon="['fas', 'bars']" /></button>
     </div>
   </nav>
 </template>
