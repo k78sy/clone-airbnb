@@ -1,14 +1,14 @@
 <script setup>
 //import { RouterLink, RouterView } from 'vue-router'
-import HeaderNav from './components/HeaderNav.vue'
-import FooterRecommend from './components/FooterRecommend.vue'
-import List from './components/List.vue'
+import HeaderTop from '@/components/HeaderTop.vue'
+import FooterBottom from '@/components/FooterBottom.vue'
+import List from '@/components/List.vue'
 </script>
 
 <template>
-  <header-nav></header-nav>
+  <header-top></header-top>
   <list></list>
-  <footer-recommend></footer-recommend>
+  <footer-bottom></footer-bottom>
 </template>
 
 <style scoped lang="scss"></style>
