@@ -34,7 +34,7 @@ const props = defineProps({
       </li>
     </ul>
     <div class="item-icon">
-      <span class="icon-cate">
+      <span v-if="props.badge" class="icon-cate">
         {{ props.badge }}
       </span>
       <span class="icon-heart">
