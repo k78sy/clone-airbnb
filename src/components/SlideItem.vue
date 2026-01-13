@@ -1,28 +1,45 @@
 <script setup>
-const props = defineProps(['foo'])
-console.log(props.foo)
-// foo = section.sectionData
+//import { Swiper, SwiperSlide } from 'swiper/vue';
+//import 'swiper/css';
+
+const props = defineProps({
+  picture: String,
+  title: String,
+  period: String,
+  price: String,
+  rating: String,
+  badge: String,
+})
 </script>
 <template>
-  <div class="slider-list">
-    <div v-for="item in foo.items" class="slide-item" :key="item.contextualPictures[0].id">
-      <div class="item-img">
-        <img :src="item.contextualPictures[0].picture" />
-      </div>
-      <ul class="item-info">
-        <li class="item-location">{{ item.title }}</li>
-        <li class="item-date">{{ item.structuredContent.primaryLine[0].body }}</li>
-        <li class="">
-          <span class="item-period">
-            {{item.structuredDisplayPrice.primaryLine.accessibilityLabel}}
-          </span>
-          <span class="item-rating">{{ item.avgRatingLocalized }}</span>
-        </li>
-      </ul>
-      <div class="item-icon">
-        <span v-if="item.badges.length" class="icon-cate">{{ item.badges[0].text }}</span>
-        <span class="icon-heart"><font-awesome-icon :icon="['far', 'heart']" /></span>
-      </div>
+  <div class="slide-item">
+    <div class="item-img">
+      <img :src="props.picture" />
+    </div>
+    <ul class="item-info">
+      <li class="item-location">
+        {{ props.title }}
+      </li>
+      <li class="item-date">
+        {{ props.period }}
+      </li>
+      <li class="">
+        <span class="item-period">
+          {{ props.price }}
+        </span>
+        <span class="item-rating">
+          <font-awesome-icon :icon="['fas', 'star']" />
+          {{ props.rating }}
+        </span>
+      </li>
+    </ul>
+    <div class="item-icon">
+      <span class="icon-cate">
+        {{ props.badge }}
+      </span>
+      <span class="icon-heart">
+        <font-awesome-icon :icon="['far', 'heart']" />
+      </span>
     </div>
   </div>
 </template>

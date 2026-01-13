@@ -8,10 +8,10 @@ import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import { faAngleLeft, faAngleRight, faMagnifyingGlass,faBars, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faAngleLeft, faAngleRight, faMagnifyingGlass,faBars, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faFacebook,faXTwitter,faInstagram} from '@fortawesome/free-brands-svg-icons'
-library.add(faAngleLeft, faAngleRight, faMagnifyingGlass,faBars,faHeart,faGlobe, faFacebook,faXTwitter,faInstagram)
+library.add(faStar, faAngleLeft, faAngleRight, faMagnifyingGlass,faBars,faHeart,faGlobe, faFacebook,faXTwitter,faInstagram)
 
 const app = createApp(App)
 
