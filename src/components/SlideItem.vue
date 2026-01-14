@@ -10,6 +10,10 @@ const props = defineProps({
   rating: String,
   badge: String,
 })
+
+const likebtn = () => {
+}
+
 </script>
 <template>
   <div class="slide-item">
@@ -38,105 +42,85 @@ const props = defineProps({
         {{ props.badge }}
       </span>
       <span class="icon-heart">
-        <font-awesome-icon :icon="['far', 'heart']" />
+        <font-awesome-icon :icon="['far', 'heart']" @click="likebtn()" />
       </span>
     </div>
   </div>
 </template>
 <style lang="scss">
-section {
-  max-width: $width-pc;
-  padding: $pd;
-  .slider-top {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    a {
-      text-decoration: none;
-      color: #000;
-      font-size: 1.2em;
-      font-weight: 500;
-    }
-    .slider-button {
+
+.slide-item {
+  position: relative;
+  .item-img {
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
-}
-.slider-list {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(7, 1fr);
-  .slide-item {
-    position: relative;
-    .item-img {
-      border-radius: 20px;
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+  .item-info {
+    padding: 7px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    li {
+      color: #999;
+      font-size: 0.9em;
+      &.item-location {
+        font-size: 1em;
+        font-weight: 500;
+        color: #000;
       }
-    }
-    .item-info {
-      padding: 7px 5px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      li {
-        color: #999;
-        font-size: 0.9em;
-        &.item-location {
-          font-size: 1em;
-          font-weight: 500;
-          color: #000;
-        }
-        &.item-date {
-        }
-        span {
-          &:not(:first-child) {
-            padding-left: 10px;
-            position: relative;
-            &:before {
-              position: absolute;
-              content: '';
-              background: #999;
-              width: 2px;
-              height: 2px;
-              left: 5px;
-              top: 50%;
-              transform: translateY(-50%);
-            }
+      &.item-date {
+      }
+      span {
+        &:not(:first-child) {
+          padding-left: 10px;
+          position: relative;
+          &:before {
+            position: absolute;
+            content: '';
+            background: #999;
+            width: 2px;
+            height: 2px;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
           }
         }
-        .item-price {
-        }
-        .item-period {
-        }
-        .item-rating {
-        }
+      }
+      .item-price {
+      }
+      .item-period {
+      }
+      .item-rating {
       }
     }
-    .item-icon {
-      position: absolute;
-      top: 0;
+  }
+  .item-icon {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    .icon-cate {
+      font-size: 0.7em;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid #fff;
+      border-radius: 10px;
       display: flex;
-      width: 100%;
-      justify-content: space-between;
-      padding: 15px;
-      box-sizing: border-box;
-      .icon-cate {
-        font-size: 0.7em;
-        font-weight: 600;
-        background: rgba(255, 255, 255, 0.7);
-        border: 1px solid #fff;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px 8px;
-      }
-      .icon-heart {
-        color: #fff;
-      }
+      justify-content: center;
+      align-items: center;
+      padding: 5px 8px;
+    }
+    .icon-heart {
+      color: #fff;
     }
   }
 }

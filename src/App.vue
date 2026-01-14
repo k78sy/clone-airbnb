@@ -48,6 +48,7 @@ onMounted(async () => {
     :modules="modules"
     :slides-per-view="7"
     :space-between="10"
+    :allowTouchMove="false"
     :navigation="{
         nextEl: '.next-'+ section.sectionData.loggingContext.backendSearchId,
         prevEl: '.prev-'+ section.sectionData.loggingContext.backendSearchId,
@@ -68,4 +69,44 @@ onMounted(async () => {
   <footer-bottom />
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+section {
+  max-width: $width-pc;
+  padding: $pd;
+  .slider-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+    .slider-button {
+      display: flex;
+      gap:5px;
+      .arrow-btn{
+        width: 28px;height: 28px;
+        background: #f2f2f2;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition:transform .2s;
+        &:hover:not(.swiper-button-disabled){
+          background: #c1c1c1;
+          transform:scale(1.1);}
+        &.swiper-button-disabled{
+          opacity: .5;
+          cursor: not-allowed;
+        }
+        svg{}
+      }
+
+    }
+  }
+}
+.slider-list {
+}
+
+</style>
